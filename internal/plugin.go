@@ -7,6 +7,10 @@ import (
 	"github.com/GoCodeAlone/workflow/plugin/external/sdk"
 )
 
+// Version is set at build time via -ldflags
+// "-X github.com/GoCodeAlone/workflow-plugin-rooms/internal.Version=X.Y.Z"
+var Version = "dev"
+
 var (
 	globalHub   *Hub
 	globalHubMu sync.RWMutex
@@ -36,7 +40,7 @@ func NewRoomsPlugin() sdk.PluginProvider {
 func (p *roomsPlugin) Manifest() sdk.PluginManifest {
 	return sdk.PluginManifest{
 		Name:        "workflow-plugin-rooms",
-		Version:     "0.1.0",
+		Version:     Version,
 		Author:      "GoCodeAlone",
 		Description: "Room management for workflow applications — join, leave, broadcast, members",
 	}
