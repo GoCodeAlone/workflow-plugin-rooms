@@ -1,0 +1,70 @@
+syntax = "proto3";
+
+package workflow.plugins.rooms.v1;
+
+option go_package = "github.com/GoCodeAlone/workflow-plugin-rooms/internal/contracts;contracts";
+
+message RoomsManagerConfig {}
+
+message RoomJoinConfig {
+  string connection_id = 1;
+  string room = 2;
+}
+
+message RoomJoinInput {
+  string connection_id = 1;
+  string room = 2;
+}
+
+message RoomJoinOutput {
+  bool joined = 1;
+  string room = 2;
+  string error = 100;
+}
+
+message RoomLeaveConfig {
+  string connection_id = 1;
+  string room = 2;
+}
+
+message RoomLeaveInput {
+  string connection_id = 1;
+  string room = 2;
+}
+
+message RoomLeaveOutput {
+  bool left = 1;
+  string room = 2;
+  string error = 100;
+}
+
+message RoomBroadcastConfig {
+  string room = 1;
+  string message = 2;
+  string exclude = 3;
+}
+
+message RoomBroadcastInput {
+  string room = 1;
+  string message = 2;
+  string exclude = 3;
+}
+
+message RoomBroadcastOutput {
+  int32 recipients = 1;
+  string error = 100;
+}
+
+message RoomMembersConfig {
+  string room = 1;
+}
+
+message RoomMembersInput {
+  string room = 1;
+}
+
+message RoomMembersOutput {
+  repeated string connections = 1;
+  int32 count = 2;
+  string error = 100;
+}

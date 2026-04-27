@@ -1,11 +1,45 @@
 version: 2
 
+project_name: workflow-plugin-rooms
+
 before:
   hooks:
     - go mod tidy
+    - "sed -i.bak -e 's/\"version\": \".*\"/\"version\": \"{{ .Version }}\"/' -e 's#/releases/download/v[^/]*/#/releases/download/v{{ .Version }}/#g' plugin.json && rm -f plugin.json.bak"
 
 builds:
-  - skip: true
+  - id: workflow-plugin-rooms
+    main: ./cmd/workflow-plugin-rooms
+    binary: workflow-plugin-rooms
+    env:
+      - CGO_ENABLED=0
+      - GOPRIVATE=github.com/GoCodeAlone/*
+    ldflags:
+      - -s -w -X github.com/GoCodeAlone/workflow-plugin-rooms/internal.Version={{ .Version }}
+    goos:
+      - linux
+      - darwin
+      - windows
+    goarch:
+      - amd64
+      - arm64
+
+archives:
+  - id: workflow-plugin-rooms
+    builds:
+      - workflow-plugin-rooms
+    name_template: "{{ .ProjectName }}-{{ .Os }}-{{ .Arch }}"
+    files:
+      - plugin.json
+      - plugin.contracts.json
+
+checksum:
+  name_template: "checksums.txt"
 
 changelog:
   sort: asc
+
+release:
+  github:
+    owner: GoCodeAlone
+    name: workflow-plugin-rooms

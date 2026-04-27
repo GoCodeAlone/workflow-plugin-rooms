@@ -28,9 +28,9 @@ type RoomHub interface {
 
 | Step Type | Description | Config Params |
 |---|---|---|
-| `step.room_join` | Add connection to a room | `room`, `conn_id` |
-| `step.room_leave` | Remove connection from a room | `room`, `conn_id` |
-| `step.room_broadcast` | Send message to all room members | `room`, `message`, `exclude_conn_id` |
+| `step.room_join` | Add connection to a room | `room`, `connectionId` |
+| `step.room_leave` | Remove connection from a room | `room`, `connectionId` |
+| `step.room_broadcast` | Send message to all room members | `room`, `message`, `exclude` |
 | `step.room_members` | Query connections in a room | `room` |
 
 Module type: `rooms.manager`
@@ -50,11 +50,11 @@ hub.JoinRoom("lobby", connID)
 ## Build & Test
 
 ```sh
-go build ./...
-go test ./...
+GOWORK=off go build ./...
+GOWORK=off go test ./...
 ```
 
-Requires Go 1.26+ and `github.com/GoCodeAlone/workflow` v0.3.52.
+Requires Go 1.26+ and `github.com/GoCodeAlone/workflow` v0.19.0.
 
 ## License
 
