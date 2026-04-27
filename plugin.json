@@ -1,0 +1,56 @@
+{
+  "name": "workflow-plugin-rooms",
+  "version": "0.1.0",
+  "description": "Room management plugin for connection grouping, broadcast, and membership queries",
+  "author": "GoCodeAlone",
+  "license": "MIT",
+  "type": "external",
+  "tier": "community",
+  "minEngineVersion": "0.19.0",
+  "keywords": ["rooms", "broadcast", "connections", "websocket"],
+  "homepage": "https://github.com/GoCodeAlone/workflow-plugin-rooms",
+  "repository": "https://github.com/GoCodeAlone/workflow-plugin-rooms",
+  "downloads": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "url": "https://github.com/GoCodeAlone/workflow-plugin-rooms/releases/download/v0.1.0/workflow-plugin-rooms-linux-amd64.tar.gz"
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "url": "https://github.com/GoCodeAlone/workflow-plugin-rooms/releases/download/v0.1.0/workflow-plugin-rooms-linux-arm64.tar.gz"
+    },
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "url": "https://github.com/GoCodeAlone/workflow-plugin-rooms/releases/download/v0.1.0/workflow-plugin-rooms-darwin-amd64.tar.gz"
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "url": "https://github.com/GoCodeAlone/workflow-plugin-rooms/releases/download/v0.1.0/workflow-plugin-rooms-darwin-arm64.tar.gz"
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "url": "https://github.com/GoCodeAlone/workflow-plugin-rooms/releases/download/v0.1.0/workflow-plugin-rooms-windows-amd64.tar.gz"
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "url": "https://github.com/GoCodeAlone/workflow-plugin-rooms/releases/download/v0.1.0/workflow-plugin-rooms-windows-arm64.tar.gz"
+    }
+  ],
+  "capabilities": {
+    "configProvider": false,
+    "moduleTypes": ["rooms.manager"],
+    "stepTypes": [
+      "step.room_join",
+      "step.room_leave",
+      "step.room_broadcast",
+      "step.room_members"
+    ],
+    "triggerTypes": []
+  }
+}

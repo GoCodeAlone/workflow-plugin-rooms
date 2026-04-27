@@ -1,0 +1,43 @@
+{
+  "version": "v1",
+  "contracts": [
+    {
+      "kind": "module",
+      "type": "rooms.manager",
+      "mode": "strict",
+      "config": "workflow.plugins.rooms.v1.RoomsManagerConfig"
+    },
+    {
+      "kind": "step",
+      "type": "step.room_join",
+      "mode": "strict",
+      "config": "workflow.plugins.rooms.v1.RoomJoinConfig",
+      "input": "workflow.plugins.rooms.v1.RoomJoinInput",
+      "output": "workflow.plugins.rooms.v1.RoomJoinOutput"
+    },
+    {
+      "kind": "step",
+      "type": "step.room_leave",
+      "mode": "strict",
+      "config": "workflow.plugins.rooms.v1.RoomLeaveConfig",
+      "input": "workflow.plugins.rooms.v1.RoomLeaveInput",
+      "output": "workflow.plugins.rooms.v1.RoomLeaveOutput"
+    },
+    {
+      "kind": "step",
+      "type": "step.room_broadcast",
+      "mode": "strict",
+      "config": "workflow.plugins.rooms.v1.RoomBroadcastConfig",
+      "input": "workflow.plugins.rooms.v1.RoomBroadcastInput",
+      "output": "workflow.plugins.rooms.v1.RoomBroadcastOutput"
+    },
+    {
+      "kind": "step",
+      "type": "step.room_members",
+      "mode": "strict",
+      "config": "workflow.plugins.rooms.v1.RoomMembersConfig",
+      "input": "workflow.plugins.rooms.v1.RoomMembersInput",
+      "output": "workflow.plugins.rooms.v1.RoomMembersOutput"
+    }
+  ]
+}

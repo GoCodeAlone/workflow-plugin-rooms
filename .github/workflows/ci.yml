@@ -6,6 +6,7 @@ on:
     branches: [main]
 env:
   GOPRIVATE: github.com/GoCodeAlone/*
+  GOWORK: off
 jobs:
   test:
     runs-on: ubuntu-latest
