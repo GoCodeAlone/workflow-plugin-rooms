@@ -201,8 +201,8 @@ func TestPluginJSONDeclaresEngineAndCapabilities(t *testing.T) {
 	if manifest.Type != "external" {
 		t.Fatalf("type = %q, want external", manifest.Type)
 	}
-	if manifest.MinEngineVersion != "0.19.0" {
-		t.Fatalf("minEngineVersion = %q, want 0.19.0", manifest.MinEngineVersion)
+	if manifest.MinEngineVersion != "0.51.7" {
+		t.Fatalf("minEngineVersion = %q, want 0.51.7", manifest.MinEngineVersion)
 	}
 	assertStringSet(t, manifest.Capabilities.ModuleTypes, []string{"rooms.manager"})
 	assertStringSet(t, manifest.Capabilities.StepTypes, []string{
