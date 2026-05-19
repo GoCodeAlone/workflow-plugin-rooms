@@ -1,5 +1,6 @@
 # workflow-plugin-rooms
 
+> ⚠️ **Experimental** — This plugin compiles and passes its unit tests but has not been validated in any active GoCodeAlone-internal production deployment. Use with caution. Please [open an issue](https://github.com/GoCodeAlone/workflow-plugin-rooms/issues/new) if you adopt it so we can promote it to **verified** status.
 Room management plugin for the [workflow](https://github.com/GoCodeAlone/workflow) framework. Extracted from `workflow-plugin-websocket` to provide a standalone, thread-safe room hub for connection grouping, broadcast, and membership queries.
 
 ## Features
