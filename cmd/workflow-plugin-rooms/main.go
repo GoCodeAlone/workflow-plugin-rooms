@@ -8,5 +8,5 @@ import (
 )
 
 func main() {
-	sdk.Serve(internal.NewRoomsPlugin())
+	sdk.Serve(internal.NewRoomsPlugin(), sdk.WithBuildVersion(sdk.ResolveBuildVersion(internal.Version)))
 }
