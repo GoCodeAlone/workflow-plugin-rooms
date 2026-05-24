@@ -1,13 +1,18 @@
 {
   "name": "workflow-plugin-rooms",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Room management plugin for connection grouping, broadcast, and membership queries",
   "author": "GoCodeAlone",
   "license": "MIT",
   "type": "external",
   "tier": "community",
   "minEngineVersion": "0.51.7",
-  "keywords": ["rooms", "broadcast", "connections", "websocket"],
+  "keywords": [
+    "rooms",
+    "broadcast",
+    "connections",
+    "websocket"
+  ],
   "homepage": "https://github.com/GoCodeAlone/workflow-plugin-rooms",
   "repository": "https://github.com/GoCodeAlone/workflow-plugin-rooms",
   "downloads": [
@@ -44,7 +49,9 @@
   ],
   "capabilities": {
     "configProvider": false,
-    "moduleTypes": ["rooms.manager"],
+    "moduleTypes": [
+      "rooms.manager"
+    ],
     "stepTypes": [
       "step.room_join",
       "step.room_leave",
