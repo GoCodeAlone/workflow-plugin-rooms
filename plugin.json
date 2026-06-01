@@ -1,6 +1,6 @@
 {
   "name": "workflow-plugin-rooms",
-  "version": "0.1.7",
+  "version": "0.0.0",
   "description": "Room management plugin for connection grouping, broadcast, and membership queries",
   "author": "GoCodeAlone",
   "license": "MIT",
